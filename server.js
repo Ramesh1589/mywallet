@@ -16,6 +16,6 @@ http.createServer(function (request, response) {
         "Content-Type": "text/json"
     });
     response.end("<h1>Welcome to Nodejs</h1>")
-}).listen();
+}).listen(config.port);
 
 console.log("Http server listening at port 3000")
