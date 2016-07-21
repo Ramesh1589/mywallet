@@ -1,21 +1,15 @@
-//get the http module
-var http = require('http');
+var config = require("./config/config");
+var http = require("http");
 
-//get the config  from the config.js
-var config = require("./config/config")
-
-console.log(config);
-
-//http module has a method createServer
-//it takes a function as callback
-// 
-http.createServer(function (request, response) {
-    //console.log(request);
-    //httpstatus:400
-    response.writeHead(200, {
-        "Content-Type": "text/json"
-    });
-    response.end("<h1>Welcome to Nodejs</h1>")
+http.createServer(function (req, res) {
+    console.log(req.url);
+    console.log(req.method);
+    console.log(req.data);
+    if (req.url == "/about") {
+        res.end("<h1>I am the about Page</h1>");
+    } else {
+        res.end("<h1>Welcome to the nodejs</h1>");
+    }
 }).listen(config.port);
 
-console.log("Http server listening at port 3000")
+console.log("server running at port" + config.port);

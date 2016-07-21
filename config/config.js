@@ -1,6 +1,6 @@
 var config = {
     port: 3000,
-    dbconnection:"xyz"
+    dbconnection:""
 };
 
 module.exports= config;

@@ -1,0 +1,24 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1>Hello Guys welcome to EJS Demo</h1>
+    <h1><%=title%></h1>
+    <table>
+
+        <tr>
+            <td>Name</td>
+        </tr>
+        <% for(var i=0; i<data.length; i++) {%>
+            <tr>
+                <td>
+                    <%= data[i].name%>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+
+</body>
+
+</html>
