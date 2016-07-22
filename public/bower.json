@@ -1,0 +1,22 @@
+{
+  "name": "mywallet",
+  "description": "this is a financial management app",
+  "main": "server.js",
+  "authors": [
+    "kiran"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "web",
+    "app"
+  ],
+  "homepage": "https://github.com/kirantrainings/mywallet",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
