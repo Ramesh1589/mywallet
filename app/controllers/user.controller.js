@@ -45,7 +45,9 @@ controller.updateUser = function (req, res) {
 controller.deleteUser = function (req, res) {
 
 };
+
 controller.findUserById = function (req, res) {
 
 };
+
 module.exports = controller;
