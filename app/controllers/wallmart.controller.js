@@ -1,5 +1,6 @@
 var request = require("request");
 var config = require("../config/config");
+var _ = require("underscore");
 
 var walmartCtrl = {};
 walmartCtrl.searchProduct = function(req, res) {
@@ -19,7 +20,18 @@ walmartCtrl.searchProduct = function(req, res) {
 function filterProducts(res, products) {
     console.log(products.items);
     var data = JSON.parse(products);
-    res.send(data.items);
+    var finalOutCome = [];
+    _.each(data.items, function(item) {
+        finalOutCome.push(_.pick(item,
+                "salePrice",
+                "shortDescription",
+                "thumbnailImage",
+                "modelNumber",
+                "numReviews",
+                "stock"));
+        });
+      finalOutCome = _.sortBy(finalOutCome,'salePrice');
+     res.send(finalOutCome.reverse());
 }
 
 
