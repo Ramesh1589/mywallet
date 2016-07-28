@@ -47,9 +47,7 @@ var findUserById = function(login, next) {
 
 controller.authenticate = function(req, res) {
     var login = req.body;
-    console.log(login);
     findUserById(login, function(data) {
-        console.log("handled response");
         res.send(data);
     });
 };
