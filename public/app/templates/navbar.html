@@ -1,0 +1,54 @@
+<nav class="navbar navbar-default" style="background-color: #e0d6dc">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="#"><img src="images/Eshop.png" style="height:45px" /></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><font color="black"><b>Shop Department</b></font> 
+              <span class="caret" ></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Men's Store</a></li>
+                    <li><a href="#">Women's Store</a></li>
+                    <li><a href="#">Kid's Store</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Foot Wear</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search here"> </div>
+            <button type="submit" class="btn btn-default">Search</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="#"><img src="images/cart.png" style="height:30px" /><span style="color:black"><b>Cart</b></span> </a>
+            </li>
+            <li ng-click="loadContent('login')">
+                <a href=#>
+                    <button class="btn btn-default btn-warning">Log in</button>
+                </a>
+            </li>
+            <li ng-click="loadContent('register')"><a href="#"><small style="color:#e87108">Register here</small></a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><font color="black"><b>Your Account info</b></font> <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Help& Support</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Sign out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+    <!-- /.container-fluid -->
+</nav>
