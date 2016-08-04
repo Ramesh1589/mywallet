@@ -1,14 +1,11 @@
 (function () {
     angular.module("register")
-        .controller("registerCtrl", ["$scope", function ($scope) {
+        .controller("registerCtrl", ["$scope", "registerSvc", function ($scope, registerSvc) {
             $scope.user = {};
-            $scope.countries = [{
-                name: "India",
-                code: "IN"
-            },
-                  {
-                name: "United States",
-                code: "US"
-            },             ]
+            $scope.countries = registerSvc.getCountries();
+
+            $scope.register = function () {
+                registerSvc.registerUser($scope.user);
+            };
     }]);
 })();

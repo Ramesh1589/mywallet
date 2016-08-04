@@ -1,6 +1,22 @@
 <div ng-controller="registerCtrl">
     <form class="form-horizontal">
         <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">User Name</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control" placeholder="First Name" ng-model="user.userName">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">Password</label>
+            <div class="col-xs-4">
+                <input type="text" class="form-control" placeholder="First Name" ng-model="user.password">
+
+            </div>
+        </div>
+
+
+        <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">First Name</label>
             <div class="col-xs-4">
                 <input type="text" class="form-control" placeholder="First Name" ng-model="user.firstName">
@@ -50,9 +66,8 @@
         </div>
         <div class=" form-group ">
             <div class="col-xs-offset-2 col-xs-4 ">
-                <button type="button" ng-hide="!user.agree" class="btn btn-primary ">Register</button>
+                <button type="button" ng-hide="!user.agree" ng-click="register()" class="btn btn-primary ">Register</button>
             </div>
         </div>
     </form>
-    {{user}}
 </div>
