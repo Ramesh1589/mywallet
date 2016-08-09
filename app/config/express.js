@@ -3,7 +3,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 //
-module.exports = function() {
+module.exports = function () {
     var app = express();
     //set the body-parser to handle the json requests
     app.use(bodyParser.urlencoded({
@@ -25,5 +25,6 @@ module.exports = function() {
     require("../routes/about.route")(app);
     require("../routes/user.route")(app);
     require("../routes/wallmart.route")(app);
+    require("../routes/lookup.route")(app);
     return app;
 };

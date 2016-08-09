@@ -1,22 +1,15 @@
 (function () {
     angular.module("register")
-        .service("registerSvc", ["$http", "$q", function ($http, $q) {
+        .service("registerSvc", ["$http", "$q", 
+                                 function ($http, $q) {
             this.getCountries = function () {
-                var countryList = [{
-                        name: "India",
-                        code: "IN"
-            },
-                    {
-                        name: "United States",
-                        code: "US"
-            }];
                 var dfd = $q.defer();
-                if (countryList) {
-                    dfd.resolve(countryList);
-                } else {
-                    dfd.reject("Error");
-                }
-
+                $http.get("/api/getCountries")
+                    .then(function (response) {
+                        dfd.resolve(response.data);
+                    }).catch(function (response) {
+                        dfd.reject(response);
+                    });
                 return dfd.promise;
             };
 
