@@ -1,6 +1,6 @@
 (function () {
     angular.module("register")
-        .service("registerSvc", ["$http", function ($http) {
+        .service("registerSvc", ["$http", "$q", function ($http, $q) {
             this.getCountries = function () {
                 var countryList = [{
                         name: "India",
@@ -10,7 +10,14 @@
                         name: "United States",
                         code: "US"
             }];
-                return countryList;
+                var dfd = $q.defer();
+                if (countryList) {
+                    dfd.resolve(countryList);
+                } else {
+                    dfd.reject("Error");
+                }
+
+                return dfd.promise;
             };
 
             this.registerUser = function (data) {
