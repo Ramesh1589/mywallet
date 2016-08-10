@@ -4,6 +4,6 @@
         angular.module("register", []);
         angular.module("products", []);
         //build module dependency
-        angular.module("eShop", ["login", "register", "products"]);
+        angular.module("eShop", ["login", "register", "products", "ngFileUpload"]);
     }
 )();
