@@ -1,0 +1,20 @@
+<div ng-controller="prodcutsCtrl">
+
+    <div class="row" ng-repeat="product in products">
+        <div class="col-sm-2">
+            <figure>
+                <img src="{{product.thumbnailImage}}">
+            </figure>
+        </div>
+        <div class="col-sm-4">
+            <h4 ng-bind="product.shortDescription|limitTo:100"></h4>
+
+        </div>
+        <div class="col-sm-2">
+            <h3 ng-bind="product.salePrice"></h3>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary">Add To Cart</button>
+        </div>
+    </div>
+</div>
