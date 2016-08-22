@@ -10,12 +10,14 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/ng-file-upload/ng-file-upload-all.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 </head>
 
 <body>
     <div class="container" ng-controller="mainCtrl">
         <div ng-include="templates.navbarUrl"></div>
-        <div ng-include="contentUrl"></div>
+        <div ui-view></div>
         <div ng-include="templates.footerUrl"></div>
     </div>
     <script src="app/modules/modules.js"></script>
@@ -23,10 +25,14 @@
     <script src="app/register/registerCtrl.js"></script>
     <script src="app/register/registerSvc.js"></script>
 
+    <script src="app/login/loginCtrl.js"></script>
+    <script src="app/login/loginSvc.js"></script>
+
     <script src="app/products/productsCtrl.js"></script>
     <script src="app/products/productsSvc.js"></script>
 
     <script src="app/app.js"></script>
+    <script src="app/configuration/config.js"></script>
 </body>
 
 </html>

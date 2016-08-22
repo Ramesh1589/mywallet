@@ -1,5 +1,5 @@
 var config = {
-    port: 3000,
+    port: 3035,
     dbconnection: "mongodb://localhost:27017/eShop",
     apiKey: "yjrruzc9fgbxvs28qw2rjczv",
     wallmartUrl: "http://api.walmartlabs.com",

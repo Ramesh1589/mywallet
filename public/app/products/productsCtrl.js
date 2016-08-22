@@ -3,12 +3,19 @@ angular.module("products")
         /*$scope.search = {
     product: "ipod"
 };*/
-        productsSvc.getProducts($scope.search)
-            .then(function (response) {
-                console.log(response);
-                $scope.products = response;
-            }).catch(function (response) {
-                console.log(response);
-            });
+        $scope.loadProducts = function () {
+            productsSvc.getProducts($scope.search)
+                .then(function (response) {
+                    console.log(response);
+                    $scope.products = response;
+                }).catch(function (response) {
+                    console.log(response);
+                });
+        };
 
+        $scope.$on("PRODCUT_SEARCH", function (event, args) {
+            $scope.loadProducts();
+        });
+
+        $scope.loadProducts();
 }]);
