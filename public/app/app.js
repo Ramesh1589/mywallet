@@ -13,6 +13,10 @@
             $scope.search = {
                 product: "samsung"
             };
+            $scope.user = {};
+            $rootScope.$on("LOGGED-IN", function (event, args) {
+                $scope.user.isLoggedIn = true;
+            });
 
             /*
                         $scope.loadContent = function (contentType) {

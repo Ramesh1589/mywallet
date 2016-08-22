@@ -11,13 +11,14 @@
                 <input type="text" ng-model="search.product" class="form-control" placeholder="Search here">
                 <button ui-sref="products" class="btn btn-default">Search</button>
                 <button type="submit" class="btn btn-default">Add Product</button>
+                <div>
+                    <a href="#"><img src="images/cart.png" style="height:20px" /><span style="color:black"><b>Cart</b></span> </a>
+                </div>
             </div>
         </div>
 
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a href="#"><img src="images/cart.png" style="height:30px" /><span style="color:black"><b>Cart</b></span> </a>
-            </li>
+        <ul class="nav navbar-nav navbar-right" ng-if="!user.isLoggedIn">
+
             <li ui-sref="login">
                 <a href="">
                     <button class="btn btn-default btn-warning">Log in</button>
@@ -36,6 +37,11 @@
                     <li><a href="#">Sign out</a></li>
                 </ul>
             </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-if="user.isLoggedIn">
+            <li><a href="">{{user.firstName}}
+            {{user.lastName}}</a></li>
+            <li><a href="">Logout</a></li>
         </ul>
     </div>
     <!-- /.navbar-collapse -->
