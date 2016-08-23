@@ -13,6 +13,7 @@
             $scope.search = {
                 product: "samsung"
             };
+            $scope.phoneNumber = "1234567890";
             $scope.user = {};
             $rootScope.$on("LOGGED-IN", function (event, args) {
                 $scope.user.isLoggedIn = true;

@@ -18,6 +18,7 @@
     <div class="container" ng-controller="mainCtrl">
         <div ng-include="templates.navbarUrl"></div>
         <div ui-view></div>
+        <h1>{{phoneNumber|formatPhone:"IN":"prefix"}}</h1>
         <div ng-include="templates.footerUrl"></div>
     </div>
     <script src="app/modules/modules.js"></script>
@@ -33,6 +34,7 @@
 
     <script src="app/app.js"></script>
     <script src="app/configuration/config.js"></script>
+    <script src="app/filters/formatPhone.js"></script>
 </body>
 
 </html>
