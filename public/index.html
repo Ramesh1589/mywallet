@@ -5,8 +5,10 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="css/register.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
     <link rel="icon" href="images/Eshop.png">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/ng-file-upload/ng-file-upload-all.js"></script>
@@ -16,7 +18,7 @@
 
 <body>
     <div class="container" ng-controller="mainCtrl">
-        <div ng-include="templates.navbarUrl"></div>
+        <div custom-header></div>
         <div ui-view></div>
         <h1>{{phoneNumber|formatPhone:"IN":"prefix"}}</h1>
         <div ng-include="templates.footerUrl"></div>
@@ -35,6 +37,11 @@
     <script src="app/app.js"></script>
     <script src="app/configuration/config.js"></script>
     <script src="app/filters/formatPhone.js"></script>
+    <script src="app/components/customLogo.js"></script>
+    <script src="app/components/customHeader.js"></script>
+    <script src="app/components/numbersOnly.js"></script>
+    <script src="app/components/alphabetsOnly.js"></script>
+    <script src="app/components/datePicker.js"></script>
 </body>
 
 </html>
