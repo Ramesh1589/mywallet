@@ -25,5 +25,17 @@
                 console.log(data);
             };
 
+             this.registerProduct = function (data) {
+                var url = "/api/registerProduct";
+                $http.post(url, data)
+                    .then(function (response) {
+                        console.log(response);
+                    })
+                    .catch(function (response) {
+                        console.log(response);
+                    });
+                console.log(data);
+            };
+
     }]);
 })();

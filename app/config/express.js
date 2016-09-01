@@ -27,5 +27,6 @@ module.exports = function () {
     require("../routes/wallmart.route")(app);
     require("../routes/lookup.route")(app);
     require("../routes/file.route")(app);
+    require("../routes/registerProduct.route")(app);
     return app;
 };

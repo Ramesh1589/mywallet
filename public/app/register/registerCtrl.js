@@ -3,6 +3,8 @@
         .controller("registerCtrl", ["$scope", "registerSvc", "Upload", "$timeout",
                                      function ($scope, registerSvc, Upload, $timeout) {
                 $scope.user = {};
+                $scope.product = {};
+                
                 registerSvc.getCountries()
                     .then(function (response) {
                         $scope.countries = response;
@@ -14,6 +16,11 @@
                 $scope.register = function () {
                     registerSvc.registerUser($scope.user);
                 };
+
+                  $scope.registerProduct = function () {
+                    registerSvc.registerProduct($scope.product);
+                };
+
 
                 $scope.uploadFiles = function (file, errFiles) {
                     $scope.f = file;

@@ -1,7 +1,7 @@
 (function () {
     "use strict";
     angular.module("eShop")
-        .controller("mainCtrl", ["$scope", "$rootScope", function ($scope, $rootScope) {
+        .controller("mainCtrl", ["$scope", "$rootScope", "$translate", function ($scope, $rootScope, $translate) {
             var baseUrl = "app/templates/";
             $scope.templates = {
                 navbarUrl: baseUrl + "navbar.html",
@@ -10,6 +10,7 @@
                 loginUrl: baseUrl + "login.html",
                 productsUrl: baseUrl + "products.html"
             };
+            $scope.language = "en";
             $scope.search = {
                 product: "samsung"
             };
@@ -18,7 +19,9 @@
             $rootScope.$on("LOGGED-IN", function (event, args) {
                 $scope.user.isLoggedIn = true;
             });
-
+            $scope.changeLanguage = function (key) {
+                $translate.use(key);
+            };
             /*
                         $scope.loadContent = function (contentType) {
                             $scope.contentUrl = '';

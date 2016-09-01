@@ -9,8 +9,8 @@
         <div class="navbar-form navbar-left" role="search">
             <div class="form-group">
                 <input type="text" ng-model="search.product" class="form-control" placeholder="Search here">
-                <button ui-sref="products" class="btn btn-default">Search</button>
-                <button type="submit" class="btn btn-default">Add Product</button>
+                <button ui-sref="products" class="btn btn-default">{{'SEARCH'|translate}}</button>
+                <button ui-sref="addProduct" type="submit" class="btn btn-default">{{'ADD_PRODUCT'|translate}}</button>
             </div>
         </div>
 
@@ -18,10 +18,10 @@
 
             <li ui-sref="login">
                 <a href="">
-                    <button class="btn btn-default btn-warning">Log in</button>
+                    <button class="btn btn-default btn-warning">{{'LOGIN'|translate}}</button>
                 </a>
             </li>
-            <li ui-sref="register"><a href=""><small style="color:#e87108">Register here</small></a></li>
+            <li ui-sref="register"><a href=""><small style="color:#e87108">{{'REGISTER'|translate}}</small></a></li>
             <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><font color="black"><b>Your Account info</b></font> <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Profile</a></li>
@@ -39,6 +39,12 @@
             <li><a href="">{{user.firstName}}
             {{user.lastName}}</a></li>
             <li><a href="">Logout</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="" ng-click="changeLanguage('en')">English
+           </a></li>
+            <li>
+                <a href="" ng-click="changeLanguage('de')">Deutsche</a></li>
         </ul>
     </div>
     <!-- /.navbar-collapse -->
