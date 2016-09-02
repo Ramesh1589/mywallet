@@ -7,5 +7,5 @@ angular.module("components")
             scope: {
                 brandName: "@" //oneWay communication.+
             }
-        };
+        }
 }]);
